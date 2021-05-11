@@ -21,4 +21,7 @@ node server.js
 - Agrego la publicacion a dockerhub
 - Cambio server.js a puerto 80
 - Cambio la receta de jenkins para revisar el puerto 80
+11/05/21
 - Agrego el deploy en k8s mediante nodeport
+- Agrego avances visuales en la aplicacion 
+- Ultimos Ajustes
