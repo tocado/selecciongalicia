@@ -15,8 +15,9 @@ pipeline {
     }
     stage('Pruebo el run con netcat') {
       steps {
-        sh 'printf \'GET / HTTP/1.1\\r\\nHost: localhost\\r\\nConnection: Close\\r\\n\\r\\n\' | /usr/bin/nc localhost 800'
-      }
+        sh '''
+          sleep 5;curl localhost:80
+        '''      }
     }
   }
   post {
