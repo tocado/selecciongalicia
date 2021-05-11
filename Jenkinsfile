@@ -23,8 +23,8 @@ pipeline {
     stage('publico en dockerhub') {
       steps {
         withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
-          sh 'docker push tkd157/pruebas:latest'
-          sh 'docker push tkd157/pruebas:$BUILD_NUMBER' 
+          sh 'docker push tkd157/selecciongalicia:latest'
+          sh 'docker push tkd157/selecciongalicia:$BUILD_NUMBER' 
         }
       }
     }
