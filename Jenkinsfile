@@ -13,11 +13,11 @@ pipeline {
         sh 'docker run --name selecciongalicia -p 800:800 -d tkd157/selecciongalicia'
       }
     }
-    stage('Pruebo el run con netcat') {
+    stage('Pruebo el run con curl') {
       steps {
         sh '''
-          sleep 5;curl localhost:800
-        '''      
+          sleep 5;curl $(docker inspect -f "{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}" selecciongalicia):800
+        '''    
       }
     }
   }
