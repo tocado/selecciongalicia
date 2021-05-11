@@ -16,7 +16,7 @@ pipeline {
     stage('Pruebo el run con curl') {
       steps {
         sh '''
-          sleep 5;curl $(docker inspect -f "{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}" selecciongalicia):800
+          sleep 5;curl $(docker inspect -f "{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}" selecciongalicia):80
         '''    
       }
     }
