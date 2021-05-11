@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Seleccion Galicia</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -12,29 +12,35 @@ body, html {
   height: 100%;
   color: #777;
   line-height: 1.8;
+  text-align: justify;
 }
 
-/* Create a Parallax Effect */
+
 .bgimg-1, .bgimg-2, .bgimg-3 {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
-/* First image (Logo. Full height) */
+
 .bgimg-1 {
   background-image: url('/images/logo.jpg');
   min-height: 100%;
+  background-size: contain;
 }
 
-/* Second image (Portfolio) */
+
 .bgimg-2 {
   background-image: url("/images/logo.jpg");
   min-height: 400px;
 }
+.posicionLeyenda {
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  opacity: 87%;
+}
 
-/* Third image (Contact) */
 .bgimg-3 {
   background-image: url("images/logo.jpg");
   min-height: 400px;
@@ -43,7 +49,6 @@ body, html {
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 
-/* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1600px) {
   .bgimg-1, .bgimg-2, .bgimg-3 {
     background-attachment: scroll;
@@ -53,51 +58,51 @@ body, html {
 </style>
 <body>
 
-
 <div class="w3-top">
-
 </div>
-
-<!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
-    <div class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Esta es una aplicación <br>realizada para examen<br>
-    	de selección de <br>Banco Galicia </div>
+    <div class="posicionLeyenda w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Esta es una aplicación <br>realizada para examen<br>
+      de selección de <br>Banco Galicia </div>
   </div>
 </div>
 
-<!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">Una Breve Explicacion..</h3>
-  <p class="w3-center"><em>K8S - Jenkins - Docker - Github - DockerHub</em></p>
-  <p>Texto explicativo de flujo de implementacion y testing</p>
+<div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center">Una Breve Explicacion</h3>
+  <p class="w3-center"><b><em>K8S - Jenkins - Docker - Github - DockerHub</em></b></p>
+  <p>&Eacute;sta implementacion está diseñada para trabajar desde jenkins tomando informacion de github para despu&eacute;s construir la imagen de docker, probarla y si está todo ok, ser implementada en Kubernetes</p>
   <div class="w3-row">
+    <div style="text-align: center">
+      <img src="/images/flowjenkins.png" style="border-radius:10px;border: 2px solid #000000" width="100%"class="w3-round w3-image ">
+    </div>
     <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-user w3-margin-right"></i>Diagrama</b></p><br>
-      <img src="/images/diagrama.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies posuere nulla pretium volutpat. Aliquam vestibulum a mauris in commodo. Donec nec elementum arcu. Curabitur rhoncus, nibh at consequat porta, dui velit blandit nulla, ac ultrices nulla neque ut quam. Mauris ornare est id augue ornare, a molestie orci sodales. Sed odio ante, condimentum ut sollicitudin nec, maximus et diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed nibh fringilla, finibus neque consequat, ullamcorper mi. Nunc et purus mi. Aliquam ac facilisis metus. Ut vestibulum dapibus massa et pharetra. 
+      </p>
     </div>
 
-    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p>Mauris molestie eros magna, maximus vulputate nibh gravida et. Fusce nec turpis fringilla, volutpat urna eu, lobortis justo. Aliquam erat volutpat. Curabitur sodales, arcu non mollis ullamcorper, nibh ligula condimentum arcu, eu ornare nunc tellus ut tortor. Vivamus efficitur purus nunc, ut rutrum nisi pretium id. Proin tincidunt vel velit eu suscipit. Donec sagittis gravida iaculis. Sed quis velit eu massa iaculis blandit non at diam. Quisque iaculis condimentum lacinia. Aenean luctus turpis quis odio tincidunt, vitae euismod justo consectetur.
+      </p>
+    </div>
   </div>
 </div>
-<!-- Footer -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-black w3-wide">Ejemplo de texto</span>
+  </div>
+</div>
+<div class="w3-content w3-container w3-padding-64">
+  <div class="w3-row">
+    <div class="w3-col m6 w3-justify w3-padding-large">
+      <p>Sed nulla odio, consectetur non dui ac, sagittis placerat turpis. Sed egestas neque leo, nec molestie urna tempus vel. Nunc nisl risus, elementum ut leo at, suscipit placerat tortor. Etiam dictum neque in mi efficitur sollicitudin. Donec hendrerit, dui id pretium ornare, nibh nunc aliquet sem, eget ultricies dolor magna non orci. Praesent rutrum arcu in risus malesuada tempus. Maecenas quis ligula ipsum. Morbi finibus dui nisi. Vivamus quis dolor est. Integer iaculis pulvinar rhoncus. Nunc vulputate magna ut molestie pellentesque.
+      </p>
+    </div>
 
- 
-<script>
-
-
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-    }
-}
-
-</script>
-
+    <div class="w3-col m6 w3-justify w3-padding-large">
+      <p>Cras non posuere tortor. Fusce aliquam convallis massa, eu lacinia arcu sagittis vitae. Vivamus placerat nisi ac est porta pretium. Nullam eleifend ex quis nisi porttitor, in ullamcorper ante sagittis. Nulla accumsan convallis sagittis. Curabitur nibh lectus, sollicitudin at finibus quis, tincidunt ac ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean vel ultricies sem. Vestibulum nec velit at dolor rutrum volutpat.
+      </p>
+    </div>  
+  </div>
+</div>
 </body>
 </html>
