@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: selecciongalicia
-  name: selecciongalicia_deploy
+  name: selecciongaliciadeploy
   namespace: default
 spec:
   replicas: 3

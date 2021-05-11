@@ -28,6 +28,15 @@ pipeline {
         }
       }
     }
+    stage ('Deploy en k8s local') {
+      steps {
+        withCredentials([usernamePassword(credentialsId: 'sshAllServersRoot', usernameVariable: 'USUARIO', passwordVariable: 'CONTRASENIA')]) {
+          sh '''
+           sshpass -p ${CONTRASENIA} ssh -o StrictHostKeyChecking=no ${USUARIO}@172.26.241.58 'kubectl rollout restart deploy selecciongaliciadeploy'
+          '''
+        }
+      }
+    }
   }
   post {
     always {
