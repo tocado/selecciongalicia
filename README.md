@@ -13,3 +13,4 @@ node server.js
 - Version Inicial 
 - Completo la documentacion en el punto de inicio
 - Agrego el gitignore para evitar que se suban las librerias de node_modules
+- Agrego dockerfile y hago pruebas en el puerto 800
