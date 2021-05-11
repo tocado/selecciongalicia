@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
-app.listen(800, function() {
-  console.log('Abriendo Puerto 800')
+app.listen(80, function() {
+  console.log('Abriendo Puerto 80')
 });
 
 app.get('/', function (request, response) {

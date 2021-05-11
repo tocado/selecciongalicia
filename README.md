@@ -19,3 +19,6 @@ node server.js
 - Agrego la primer prueba (con netcat)
 - Cambio la prueba a curl
 - Agrego la publicacion a dockerhub
+- Cambio server.js a puerto 80
+- Cambio la receta de jenkins para revisar el puerto 80
+- Agrego el deploy en k8s mediante nodeport

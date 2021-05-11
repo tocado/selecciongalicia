@@ -10,7 +10,7 @@ pipeline {
     }
     stage('corro la imagen') {
       steps {
-        sh 'docker run --name selecciongalicia -p 800:800 -d tkd157/selecciongalicia'
+        sh 'docker run --name selecciongalicia -p 80:80 -d tkd157/selecciongalicia'
       }
     }
     stage('Pruebo el run con curl') {

@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: selecciongalicia
+  name: selecciongalicia_deploy
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: selecciongalicia
+  template:
+    metadata:
+      labels:
+        app: selecciongalicia
+    spec:
+      containers:
+      - image: tkd157/selecciongalicia:latest
+        imagePullPolicy: Always
+        name: selecciongalicia
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: selecciongalicia
+  namespace: default
+spec:
+  ports:
+  - nodePort: 30377
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: selecciongalicia
+  type: NodePort
