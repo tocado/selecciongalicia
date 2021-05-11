@@ -1,26 +1,26 @@
 pipeline {
   agent any
   stages {
-    stage('Hago el build inicial del codigo y taggeo el build number') {
+    stage('BuildImage') {
       steps {
         sh 'docker build -t selecciongalicia:latest .' 
         sh 'docker tag selecciongalicia tkd157/selecciongalicia:latest'
         sh 'docker tag selecciongalicia tkd157/selecciongalicia:$BUILD_NUMBER'
       }
     }
-    stage('corro la imagen') {
+    stage('Run') {
       steps {
-        sh 'docker run --name selecciongalicia -p 80:80 -d tkd157/selecciongalicia'
+        sh 'docker run --name selecciongalicia -p 3000:3000 -d tkd157/selecciongalicia'
       }
     }
-    stage('Pruebo el run con curl') {
+    stage('Test') {
       steps {
         sh '''
-          sleep 5;curl $(docker inspect -f "{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}" selecciongalicia):80
+          sleep 5;curl $(docker inspect -f "{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}" selecciongalicia):3000
         '''    
       }
     }
-    stage('publico en dockerhub') {
+    stage('Publish DockerHub') {
       steps {
         withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
           sh 'docker push tkd157/selecciongalicia:latest'
@@ -28,7 +28,7 @@ pipeline {
         }
       }
     }
-    stage ('Deploy en k8s local') {
+    stage ('Deploy k8s') {
       steps {
         withCredentials([usernamePassword(credentialsId: 'sshAllServersRoot', usernameVariable: 'USUARIO', passwordVariable: 'CONTRASENIA')]) {
           sh '''
