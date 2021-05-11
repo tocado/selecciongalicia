@@ -16,3 +16,4 @@ node server.js
 - Agrego dockerfile y hago pruebas en el puerto 800
 - Agrego jenkinsfile con el build y el post
 - Agrego run y corrijo el post
+- Agrego la primer prueba (con netcat)
