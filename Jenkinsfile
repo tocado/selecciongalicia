@@ -16,8 +16,9 @@ pipeline {
     stage('Pruebo el run con netcat') {
       steps {
         sh '''
-          sleep 5;curl localhost:80
-        '''      }
+          sleep 5;curl localhost:800
+        '''      
+      }
     }
   }
   post {
