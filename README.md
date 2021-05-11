@@ -30,6 +30,7 @@ donde ``<imagen>`` puede ser
 - Agrego dockerfile y hago pruebas
 - Agrego jenkinsfile con el build y el post
 - Agrego run y corrijo el post
+
 11/05/21
 - Agrego el deploy en k8s mediante nodeport
 - Agrego avances visuales en la aplicacion 
