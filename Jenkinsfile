@@ -20,6 +20,14 @@ pipeline {
         '''    
       }
     }
+    stage('publico en dockerhub') {
+      steps {
+        withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
+          sh 'docker prush tkd157/pruebas:latest'
+          sh 'docker prush tkd157/pruebas:$BUILD_NUMBER' 
+        }
+      }
+    }
   }
   post {
     always {

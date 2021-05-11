@@ -17,3 +17,5 @@ node server.js
 - Agrego jenkinsfile con el build y el post
 - Agrego run y corrijo el post
 - Agrego la primer prueba (con netcat)
+- Cambio la prueba a curl
+- Agrego la publicacion a dockerhub
